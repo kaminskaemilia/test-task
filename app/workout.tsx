@@ -100,7 +100,8 @@ export default function WorkoutScreen() {
                     <TouchableOpacity className="p-2">
                         <BackArrow />
                     </TouchableOpacity>
-                    <Text className="text-xl font-bold ml-2">{`Chris' ${localWorkoutPlan?.workout_name || 'Workout'}`}</Text>
+                    <Text className="text-xl font-bold ml-2"
+                          style={{ fontFamily: 'Manrope600' }}>{`Chris' ${localWorkoutPlan?.workout_name || 'Workout'}`}</Text>
                 </View>
             </View>
 
@@ -116,7 +117,7 @@ export default function WorkoutScreen() {
                         horizontal={true}
                         showsHorizontalScrollIndicator={false}
                         containerStyle={{ paddingVertical: 8, paddingHorizontal: 8 }}
-                        activationDistance={10} // Adjust this value if needed
+                        activationDistance={10}
                         renderItem={({ item, drag, isActive }) => {
                             const isCompletedExercise = exercisesList.findIndex(ex => ex.name === item.name) < exercisesList.findIndex(ex => ex.name === currentExerciseTitle);
                             return (
@@ -161,19 +162,19 @@ export default function WorkoutScreen() {
                 animationType="fade"
             >
                 <View className="flex-1 justify-end items-center p-4 mb-5">
-                    <View className="bg-white p-6 rounded-full w-4/5 ">
+                    <View className="bg-white p-2 rounded-full w-4/5 ">
                         <View className="flex-row justify-between">
                             <TouchableOpacity
-                                className="bg-red py-3 px-5 rounded-lg  mr-2"
+                                className="mr-2 flex-1"
                                 onPress={discardChanges}
                             >
-                                <Text className="text-center font-medium">Discard</Text>
+                                <Text className="bg-[#F3F2F7] py-3 px-5 rounded-full text-center font-medium" style={{ fontFamily: 'Manrope500' }}>Discard</Text>
                             </TouchableOpacity>
                             <TouchableOpacity
-                                className=" py-3 px-5 rounded-lg  ml-2"
+                                className="ml-2 flex-1"
                                 onPress={saveChanges}
                             >
-                                <Text className="text-center font-medium">Save Changes</Text>
+                                <Text className="bg-[#FFE74C] text-center font-medium py-3 px-5 rounded-full" style={{ fontFamily: 'Manrope500' }}>Save Changes</Text>
                             </TouchableOpacity>
                         </View>
                     </View>

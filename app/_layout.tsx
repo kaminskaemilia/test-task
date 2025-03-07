@@ -17,7 +17,9 @@ SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
   const colorScheme = useColorScheme();
   const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
+    Manrope400: require('../assets/fonts/Manrope-Regular.ttf'),
+    Manrope500: require('../assets/fonts/Manrope-Medium.ttf'),
+    Manrope600: require('../assets/fonts/Manrope-Bold.ttf'),
   });
 
   useEffect(() => {
@@ -34,7 +36,6 @@ export default function RootLayout() {
       <QueryClientProvider client={queryClient}>
         <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
           <GestureHandlerRootView>
-
           <Stack screenOptions={{ headerShown: false }}>
             <Stack.Screen name="workout" />
             <Stack.Screen name="+not-found" options={{ presentation: 'modal' }} />

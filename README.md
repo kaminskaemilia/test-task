@@ -1,50 +1,61 @@
-# Welcome to your Expo app 👋
+# Welcome the App 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-## Get started
+## 🚀 About the App
 
-1. Install dependencies
+This app is designed to help users manage their workout plans efficiently. It provides features such as:
+- Creating and customizing workout plans
+- Tracking exercises with visual representations
+- Drag-and-drop functionality for rearranging exercises
 
-   ```bash
-   npm install
-   ```
+## 📌 Prerequisites
 
-2. Start the app
+Before running the app, make sure you have the following installed:
+- [Node.js](https://nodejs.org/) (LTS version recommended) (v18.14.0 was used for developing)
+- [Expo CLI](https://docs.expo.dev/get-started/installation/)
+- Android Emulator / iOS Simulator
 
-   ```bash
-    npx expo start
-   ```
+## 🛠️ Setup Instructions
 
-In the output, you'll find options to open the app in a
+### 1️⃣ Install dependencies
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+```bash
+npm install
+```
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### 2️⃣ Create an `.env` file
 
-## Get a fresh project
+Create a `.env` file in the root directory and add the following environment variable:
 
-When you're ready, run:
+```env
+EXPO_PUBLIC_API_URL=https://api-dev.wpfcoaching.de/
+```
+
+### 3️⃣ Start the app
+
+Run the following command to start the Expo development server:
+
+```bash
+expo run ios
+```
+
+### 4️⃣ Open the app on a device/emulator
+
+Once the server starts, you can open the app in different environments:
+
+- 📱 **Development Build**: Run the app in a custom Expo Dev Client.
+- 🤖 **Android Emulator**: Open the app using an Android emulator.
+- 🍏 **iOS Simulator**: Open the app on an iOS simulator.
+- 🟢 **Expo Go**: Scan the QR code using the Expo Go app (for limited sandbox testing).
+
+## 🔄 Reset the Project
+
+If you want a fresh start, run:
 
 ```bash
 npm run reset-project
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+This will move the starter code to the **app-example** directory and create a blank **app** directory for development.
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
